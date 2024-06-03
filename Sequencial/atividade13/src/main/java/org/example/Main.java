@@ -29,14 +29,19 @@ public class Main {
         altura = scanner.nextDouble();
 
         System.out.println("Você é homem(h) ou mulher(m)? ");
-        genero = scanner.next();
+        genero= scanner.next().toUpperCase();
 
         switch (genero) {
-            case "m": {
+            case "M": {
                 System.out.println("Seu peso ideal: " + df.format(calcularPesoIdealMulher(altura)));
+                break;
             }
-            case "h": {
+            case "H": {
                 System.out.println("Seu peso ideal: " + df.format(calcularPesoIdealHomem(altura)));
+                break;
+            }
+            default: {
+                System.out.println("Genero invalido");
             }
         }
 
